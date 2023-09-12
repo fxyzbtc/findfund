@@ -146,7 +146,7 @@ ETF = prepare_data()
 
 # groupby index name with sum of assetalNet, and sort by assetalNet
 # output as values of multiselect
-INDEXES = (ETF.groupby('indexName').agg({'assetalNet': 'sum'}).
+INDEXES = (ETF.groupby('indexName').sum().
            sort_values(by=['assetalNet'], ascending=False).
            index.tolist())
 
