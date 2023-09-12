@@ -15,7 +15,7 @@ import gradio as gr
 import pandas as pd
 from pathlib import Path
 
-DATA_FP = Path(__file__).parent.parent / 'data/cnfunds.csv'
+DATA_FP =  'data/cnfunds.csv'
 
 def prepare_data():
     def get_header():
