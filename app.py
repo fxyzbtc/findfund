@@ -259,4 +259,4 @@ with gr.Blocks() as main:
 
 if __name__ == "__main__":
     main.queue()
-    main.launch(port=8000)
+    main.launch()
