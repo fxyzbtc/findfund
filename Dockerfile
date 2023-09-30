@@ -3,7 +3,9 @@ FROM python:3.11 as builder
 
 WORKDIR /app
 
-COPY ./app/requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
+COPY ./data /app/data
+COPY ./app.py /app/app.py
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -16,9 +18,6 @@ WORKDIR /app
 # Copy the Python environment from the builder stage
 COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
-
-# Copy your Gradio app code into the container
-COPY ./app /app
 
 EXPOSE 7860
 
