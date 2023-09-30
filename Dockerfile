@@ -20,5 +20,7 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 # Copy your Gradio app code into the container
 COPY ./app /app
 
+EXPOSE 7860
+
 # Specify the command to run your Gradio app
 CMD ["python", "/app/app.py"]
