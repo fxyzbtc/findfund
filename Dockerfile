@@ -3,7 +3,7 @@ FROM python:3.11 as builder
 
 WORKDIR /app
 
-COPY ./app/requirements.txt /app/requirements.txt
+COPY . .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -18,7 +18,7 @@ COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/pytho
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Copy your Gradio app code into the container
-COPY ./app /app
+COPY . .
 
 # Specify the command to run your Gradio app
 CMD ["python", "/app/app.py"]
