@@ -177,10 +177,10 @@ with gr.Blocks() as main:
         gr_dd_indexName = gr.Dropdown(INDEXES, label='选择指数', multiselect=True)
 
         # filters    
-        gr_cbg_indexindustry = gr.CheckboxGroup(INDEX_INDUSTRY, multiselect=True, label='指数行业')
-        gr_cbg_fundorganizationformcategory = gr.CheckboxGroup(FUNDORGANIZATIONFORMCATEGORY, multiselect=True, label='基金组织形式类别')
-        gr_cbg_fundassetalcategory = gr.CheckboxGroup(FUNDASSETALCATEGORY, multiselect=True, label='基金资产类别')
-        gr_cbg_investareacategory = gr.CheckboxGroup(INVESTAREACATEGORY, multiselect=True, label='指数投资领域类别')
+        gr_cbg_indexindustry = gr.CheckboxGroup(INDEX_INDUSTRY, label='指数行业')
+        gr_cbg_fundorganizationformcategory = gr.CheckboxGroup(FUNDORGANIZATIONFORMCATEGORY, label='基金组织形式类别')
+        gr_cbg_fundassetalcategory = gr.CheckboxGroup(FUNDASSETALCATEGORY, label='基金资产类别')
+        gr_cbg_investareacategory = gr.CheckboxGroup(INVESTAREACATEGORY, label='指数投资领域类别')
         gr_btn_search = gr.Button('搜索')
 
 
